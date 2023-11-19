@@ -1,0 +1,39 @@
+# cd
+alias -- -='cd -'
+alias ..='cd ..'
+alias ...='cd ../..'
+
+# simple
+alias mkdir='mkdir -p'                                          # Create parent directories
+alias chmox='chmod +x'                                          # Set executable flag
+
+# ls
+alias ls='lsd'
+alias l='ls'
+alias la='ls -A'
+alias ll='ls -Alh'
+
+# random
+alias rm=trash
+
+# editors
+alias vim='nvim'
+
+
+# git
+alias gs='git status'
+alias gma='git commit --amend'
+alias gl='git lg'
+alias gd='git diff'
+alias gds='git diff --staged'
+alias gdp="git diff @{1}.."
+alias glp="git lg @{1}.."
+alias gcob='git checkout -b'
+
+alias cp="cp -i"                                                # Confirm before overwriting something
+alias df='df -h'                                                # Human-readable sizes
+alias free='free -m'                                            # Show sizes in MB
+alias gitu='git add . && git commit && git push'
+
+# dotfiles
+alias dotgit="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"

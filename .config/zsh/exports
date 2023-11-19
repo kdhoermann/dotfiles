@@ -1,0 +1,28 @@
+#!/bin/sh
+
+## PATH
+
+# Jetbrains Toolbox Apps
+PATH="$PATH:~/.local/share/JetBrains/Toolbox/scripts"
+
+# PostgreSQL
+export PGDATA=/var/lib/postgres/data16
+export LD_LIBRARY_PATH=/opt/postgresql16/lib
+PATH=/opt/postgresql16/bin:$PATH
+
+#pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+PATH="$PYENV_ROOT/bin:$PATH"
+export PATH
+
+## Settings
+
+# Colors for man pages
+export LESS_TERMCAP_mb=$'\E[01;32m'
+export LESS_TERMCAP_md=$'\E[01;32m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;47;34m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;36m'
+export LESS=-R
