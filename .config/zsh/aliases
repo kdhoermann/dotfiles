@@ -1,24 +1,24 @@
 # cd
-alias -- -='cd -'
-alias ..='cd ..'
-alias ...='cd ../..'
+alias -- -='cd -'                                               # Previous directory (single "-", not "--")
+alias ..='cd ..'                                                # Parent directory
+alias ...='cd ../..'                                            # Parent of parent directory
 
-# simple
+# misc
 alias mkdir='mkdir -p'                                          # Create parent directories
+alias rd=rmdir                                                  # Remove directory
 alias chmox='chmod +x'                                          # Set executable flag
+alias cp="cp -i"                                                # Confirm before overwriting something
+alias df='df -h'                                                # Human-readable sizes
+alias free='free -m'                                            # Show sizes in MB
 
 # ls
-alias ls='lsd'
+alias ls='lsd'                                                  # Use lsd in place of ls
 alias l='ls'
-alias la='ls -A'
-alias ll='ls -Alh'
-
-# random
-alias rm=trash
+alias la='ls -A'                                                #  Do not ignore entries starting with . (except . and ..)
+alias ll='ls -Alh'                                              #  Display extended file metadata as a table
 
 # editors
 alias vim='nvim'
-
 
 # git
 alias gs='git status'
@@ -29,11 +29,8 @@ alias gds='git diff --staged'
 alias gdp="git diff @{1}.."
 alias glp="git lg @{1}.."
 alias gcob='git checkout -b'
-
-alias cp="cp -i"                                                # Confirm before overwriting something
-alias df='df -h'                                                # Human-readable sizes
-alias free='free -m'                                            # Show sizes in MB
 alias gitu='git add . && git commit && git push'
+alias dotgit="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME" # dotfiles
 
-# dotfiles
-alias dotgit="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+# colorized --help
+alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
